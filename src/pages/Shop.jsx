@@ -33,7 +33,7 @@ export function ShopPage() {
       ]} />
 
       <section className="wrap" style={{ padding: '60px 24px 32px' }}>
-        <div className="eyebrow eyebrow-bright">✦ VALE · The Catalog</div>
+        <div className="eyebrow eyebrow-bright">✦ BANJO & CO · The Catalog</div>
         <h1 className="f-display" style={{ fontSize: 'clamp(56px, 8vw, 120px)', marginTop: 12, lineHeight: 0.95 }}>
           FOUR THINGS,<br/>
           ONE <span style={{ color: 'var(--accent)' }}>FROG</span>.

@@ -300,7 +300,7 @@ export function ProductPage() {
           <div style={{ borderTop: '1.5px solid var(--ink)' }}>
             {[
               { id: 'details',  t: 'Details',  body: 'Hand-stitched 8" plush. Soft-touch cotton outer with recycled poly fill. Embroidered eyes, removable felt banjo. Tagged with edition number and small studio note. Surface wash only.' },
-              { id: 'shipping', t: 'Shipping', body: 'Ships from VALE Studio in flat-pack boxes. Worldwide. Standard 5–8 days, express available at checkout. Drop A units begin shipping July 18, 2026.' },
+              { id: 'shipping', t: 'Shipping', body: 'Ships from BANJO & CO Studio in flat-pack boxes. Worldwide. Standard 5–8 days, express available at checkout. Drop A units begin shipping July 18, 2026.' },
               { id: 'crypto',   t: 'Paying with crypto', body: 'We accept ETH and SOL via wallet connect (MetaMask, Phantom, Coinbase, WalletConnect). Stablecoins (USDC) supported on both chains. No gas markup — you pay base network fees.' },
               { id: 'returns',  t: 'Returns', body: '14-day no-questions return on unused plush. Crypto orders are refunded as USDC at order-time exchange rate.' },
             ].map((row) => (

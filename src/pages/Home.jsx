@@ -358,7 +358,7 @@ export function HomePage() {
                 FIRST LOOKS.
               </h3>
               <p style={{ fontSize: 13, marginTop: 12, opacity: 0.75, maxWidth: 280 }}>
-                Stay updated on the next VALE Drop.<br />
+                Stay updated on the next BANJO & CO Drop.<br />
                 (Is it a free mint NFT next?)
               </p>
             </div>
@@ -456,7 +456,7 @@ export function HomePage() {
       </section>
 
       <Marquee tone="olive" items={[
-        '✦ VALE', '✦ VALE', '✦ VALE', '✦ VALE',
+        '✦ BANJO & CO', '✦ BANJO & CO', '✦ BANJO & CO', '✦ BANJO & CO',
       ]} />
 
       <style>{`

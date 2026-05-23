@@ -64,7 +64,7 @@ export function Footer() {
         font: '500 10px/1 var(--f-mono)', letterSpacing: '0.15em',
         textTransform: 'uppercase', opacity: 0.6,
       }}>
-        <span>© 2026 VALE LLC</span>
+        <span>© 2026 BANJO & CO</span>
         <span>Pays in FIAT + Crypto · ETH · SOL</span>
         <span>banjoandco.xyz</span>
       </div>
