@@ -15,20 +15,21 @@ export function Footer() {
       background: 'var(--ink)', color: 'var(--cream)',
       paddingTop: 60, paddingBottom: 30, marginTop: 80,
     }}>
-      <div className="wrap footer-grid" style={{
-        display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 32,
-      }}>
-        <div>
-          <div className="f-display" style={{ fontSize: 42, lineHeight: 0.95 }}>
-            BANJO<br/>&amp; CO.
-          </div>
-          <div className="f-mono" style={{
-            fontSize: 11, marginTop: 16, opacity: 0.7, maxWidth: 280,
-          }}>
-            A small studio making soft things for a hard internet.<br/>
-            Est. 2026 · PumpFun → everywhere
-          </div>
+      <div className="wrap" style={{ marginBottom: 40 }}>
+        <div className="f-display" style={{ fontSize: 'clamp(36px, 6vw, 56px)', lineHeight: 0.95 }}>
+          BANJO &amp; CO.
         </div>
+        <div className="f-mono" style={{
+          fontSize: 11, marginTop: 16, opacity: 0.7, maxWidth: 420,
+        }}>
+          A small studio making soft things for a hard internet.<br/>
+          Est. 2026 · PumpFun → everywhere
+        </div>
+      </div>
+
+      <div className="wrap footer-grid" style={{
+        display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32,
+      }}>
         <div>
           <div className="eyebrow" style={{ color: 'var(--terracotta-soft)' }}>Shop</div>
           <ul style={{ listStyle: 'none', padding: 0, margin: '12px 0 0', display: 'flex', flexDirection: 'column', gap: 8, fontSize: 14 }}>
@@ -70,11 +71,11 @@ export function Footer() {
       </div>
 
       <style>{`
-        @media (max-width: 820px) {
-          .footer-grid { grid-template-columns: 1fr 1fr !important; }
-          .footer-meta { flex-direction: column; gap: 8px; }
+        @media (max-width: 640px) {
+          .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+          .footer-meta { flex-direction: column; gap: 8px; align-items: flex-start !important; }
         }
-        @media (max-width: 520px) {
+        @media (max-width: 420px) {
           .footer-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>

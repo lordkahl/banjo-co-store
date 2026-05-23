@@ -152,15 +152,17 @@ export function HomePage() {
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16,
         }}>
           {PRODUCTS.map((p, i) => (
-            <article key={p.id} className="reveal" data-reveal={p.soon ? 'notify me →' : 'meet banjo →'}
+            <article key={p.id} className="reveal roadmap-card" data-reveal={p.soon ? 'notify me →' : 'meet banjo →'}
               onClick={() => p.soon ? null : go('product')}
               style={{
                 background: 'var(--cream-soft)',
                 border: '1.5px solid var(--ink)',
                 overflow: 'hidden',
                 display: 'flex', flexDirection: 'column',
-                aspectRatio: '4/5', height: '300px', gap: '0px', justifyContent: 'flex-start',
-                borderRadius: '5.33335px', borderWidth: '1.99996px', padding: '0px', margin: '0px',
+                aspectRatio: '4/5',
+                justifyContent: 'flex-start',
+                borderRadius: 6,
+                padding: 0, margin: 0, minWidth: 0,
               }}>
               <div className="ph" style={{ flex: 1, borderRadius: 0, borderLeft: 0, borderRight: 0, borderTop: 0, background: '#f4f0e2', backgroundImage: 'none', position: 'relative', overflow: 'hidden' }}>
                 {i === 0 && (
@@ -179,12 +181,12 @@ export function HomePage() {
                   }}>{p.chip}</span>
                 </div>
               </div>
-              <div style={{ padding: '12px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                  <div className="f-mono" style={{ fontSize: 10, color: 'var(--mute)', letterSpacing: '0.12em' }}>No.{p.n}</div>
-                  <div className="f-display" style={{ fontSize: 15 }}>{p.short}</div>
+              <div style={{ padding: '10px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, minWidth: 0 }}>
+                <div style={{ minWidth: 0 }}>
+                  <div className="f-mono" style={{ fontSize: 9, color: 'var(--mute)', letterSpacing: '0.12em' }}>No.{p.n}</div>
+                  <div className="f-display roadmap-card-title" style={{ fontSize: 14, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.short}</div>
                 </div>
-                <div className="f-display" style={{ fontSize: 18, color: p.soon ? 'var(--mute)' : 'var(--accent)' }}>
+                <div className="f-display" style={{ fontSize: 16, color: p.soon ? 'var(--mute)' : 'var(--accent)' }}>
                   {p.price != null ? `$${p.price}` : 'TBA'}
                 </div>
               </div>
@@ -472,11 +474,15 @@ export function HomePage() {
         @media (max-width: 880px) {
           .split-stage { grid-template-columns: 1fr !important; min-height: auto !important; }
           .split-stage > div:first-child { aspect-ratio: 5/4; min-height: 320px; border-right: 0 !important; border-bottom: 1.5px solid var(--ink); }
-          .roadmap-grid { grid-template-columns: 1fr 1fr !important; }
+          .roadmap-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
           .plug-grid { grid-template-columns: 1fr !important; }
           .plug-grid > div { min-height: auto !important; }
           .plug-grid > div:nth-child(3) { min-height: 380px !important; }
           .lore-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+        }
+        @media (max-width: 520px) {
+          .roadmap-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+          .roadmap-card { aspect-ratio: 5/4 !important; }
         }
       `}</style>
     </div>
